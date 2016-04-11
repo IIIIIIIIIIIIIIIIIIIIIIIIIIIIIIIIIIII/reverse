@@ -2,6 +2,10 @@ package it.sevenbits.packages.array.implementation;
 
 import it.sevenbits.packages.array.IReverseArray;
 
+/**
+ * class of reversing of array
+ * @param <T>
+ */
 public class ReverseArray<T> implements IReverseArray<T> {
     private T[] array;
     /**
@@ -24,7 +28,7 @@ public class ReverseArray<T> implements IReverseArray<T> {
 
     /**
      * Reverse
-     * @param newArray
+     * @param newArray of <T> type
      */
     public ReverseArray(final T[] newArray) {
         array = newArray;

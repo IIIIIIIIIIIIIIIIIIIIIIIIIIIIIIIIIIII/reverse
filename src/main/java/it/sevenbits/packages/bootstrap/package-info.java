@@ -1,4 +1,4 @@
 /**
- * Bootstrap class that include main method
+ * Bootstrap class include main method
  */
 package it.sevenbits.packages.bootstrap;

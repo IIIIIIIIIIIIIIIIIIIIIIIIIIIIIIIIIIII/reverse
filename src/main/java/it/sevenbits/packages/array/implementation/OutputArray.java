@@ -12,7 +12,7 @@ public final class OutputArray<T> implements IOutputArray<T> {
 
     /**
      * print array
-     * @param newArray
+     * @param newArray of <T> type
      */
     public OutputArray(final T[] newArray) {
         array = newArray;

@@ -1,4 +1,4 @@
 /**
- * This class include methods of reversing and output of array
+ * package has classes with methods of printing array and reversing array
  */
 package it.sevenbits.packages.array.implementation;
