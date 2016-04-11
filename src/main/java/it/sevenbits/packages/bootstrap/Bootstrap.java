@@ -1,6 +1,9 @@
 package it.sevenbits.packages.bootstrap;
 
-import it.sevenbits.packages.array.Array;
+import it.sevenbits.packages.array.IOutputArray;
+import it.sevenbits.packages.array.IReverseArray;
+import it.sevenbits.packages.array.implementation.OutputArray;
+import it.sevenbits.packages.array.implementation.ReverseArray;
 
 /**
  * Bootstrap class
@@ -11,17 +14,16 @@ public final class Bootstrap {
      */
     private Bootstrap() {
     }
-    private static int[] ARRAY = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+    private static String [] ARRAY = new String[] { "one", "two", "three", "four", "five" };
     /**
      *
      * @param args just like that
      */
     public static void main(final String[] args) {
-        Array array = new Array();
-        System.out.print("Original array: ");
-        array.outputArray(ARRAY);
-        array.reverseArray(ARRAY);
-        System.out.print("Reversed array: ");
-        array.outputArray(ARRAY);
+        IOutputArray<String> array = new OutputArray<String>(ARRAY);
+        array.outputArray();
+        IReverseArray<String> arr = new ReverseArray<String>(ARRAY);
+        arr.reverseArray();
+        array.outputArray();
     }
 }
