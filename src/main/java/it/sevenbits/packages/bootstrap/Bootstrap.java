@@ -20,10 +20,14 @@ public final class Bootstrap {
      * @param args just like that
      */
     public static void main(final String[] args) {
-        IOutputArray<String> array = new OutputArray<String>(ARRAY);
-        array.outputArray();
-        IReverseArray<String> arr = new ReverseArray<String>(ARRAY);
-        arr.reverseArray();
-        array.outputArray();
+        try {
+            IOutputArray<String> array = new OutputArray<String>(ARRAY);
+            array.outputArray();
+            IReverseArray<String> arr = new ReverseArray<String>(ARRAY);
+            arr.reverseArray();
+            array.outputArray();
+        } catch (NullPointerException ex) {
+            System.out.print(ex);
+        }
     }
 }
