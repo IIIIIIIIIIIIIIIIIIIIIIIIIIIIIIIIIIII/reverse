@@ -2,11 +2,10 @@ package it.sevenbits.packages.array;
 
 /**
  * Print array
- * @param <T>
  */
-public interface IOutputArray<T> {
+public interface IOutputArray {
     /**
      * print array
      */
-     void outputArray();
+     <T> void outputArray(IArray<T> array);
 }

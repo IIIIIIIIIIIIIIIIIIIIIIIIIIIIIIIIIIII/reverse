@@ -1,27 +1,20 @@
 package it.sevenbits.packages.array.implementation;
 
+import it.sevenbits.packages.array.IArray;
 import it.sevenbits.packages.array.IOutputArray;
 
 /**
  * Class print array
- * @param <T>
  */
-public final class OutputArray<T> implements IOutputArray<T> {
+public final class OutputArray implements IOutputArray {
 
-    private T[] array;
-
-    /**
-     * print array
-     * @param newArray of <T> type
-     */
-    public OutputArray(final T[] newArray) {
-        array = newArray;
-    }
     /**
      * output array
+     * @param <T> type
      */
-    public void outputArray() {
-            for (T element : this.array) {
+    public <T> void outputArray(final IArray<T> array) {
+            T[] tempArray = array.getArray();
+            for (T element : tempArray) {
                 System.out.print(element + " ");
             }
             System.out.println();
