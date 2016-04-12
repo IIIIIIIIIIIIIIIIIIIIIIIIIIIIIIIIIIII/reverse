@@ -2,11 +2,10 @@ package it.sevenbits.packages.array;
 
 /**
  * Reverse array
- * @param <T>
  */
-public interface IReverseArray<T> {
+public interface IReverseArray {
     /**
      * reverse array
      */
-    void reverseArray();
+    <T> void reverseArray(IArray<T> array);
 }

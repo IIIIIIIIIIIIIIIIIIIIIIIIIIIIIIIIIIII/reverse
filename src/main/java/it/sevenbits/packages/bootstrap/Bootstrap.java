@@ -23,7 +23,7 @@ public final class Bootstrap {
         try {
             IOutputArray<String> array = new OutputArray<String>(ARRAY);
             array.outputArray();
-            IReverseArray<String> arr = new ReverseArray<String>(ARRAY);
+            IReverseArray arr = new ReverseArray();
             arr.reverseArray();
             array.outputArray();
         } catch (NullPointerException ex) {

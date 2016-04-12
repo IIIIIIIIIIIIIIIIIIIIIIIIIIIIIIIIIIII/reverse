@@ -1,30 +1,24 @@
 package it.sevenbits.packages.array.implementation;
 
+import it.sevenbits.packages.array.IArray;
 import it.sevenbits.packages.array.IReverseArray;
 
 /**
  * class of reversing of array
- * @param <T>
  */
-public class ReverseArray<T> implements IReverseArray<T> {
-    private T[] array;
+public class ReverseArray implements IReverseArray {
     /**
-     * Reversing of array
+     *
+     * @param array is element of Array
+     * @param <T> type
      */
-    public void reverseArray() {
-        int length = array.length;
-        for (int i = 0; i < length / 2; i++) {
-            T temp = this.array[i];
-            array[i] = this.array[array.length - i - 1];
-            this.array[array.length - i - 1] = temp;
+    public <T> void reverseArray(final IArray<T> array) {
+        T[] tempArray = array.getArray();
+        for (int i = 0; i < tempArray.length / 2; i++) {
+            T currentElement = tempArray[i];
+            tempArray[i] = tempArray[tempArray.length - i - 1];
+            tempArray[tempArray.length - i - 1] = currentElement;
         }
-    }
-
-    /**
-     * Reverse
-     * @param newArray of <T> type
-     */
-    public ReverseArray(final T[] newArray) {
-        array = newArray;
+        array.setArray(tempArray);
     }
 }
