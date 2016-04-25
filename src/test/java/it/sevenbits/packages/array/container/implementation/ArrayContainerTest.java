@@ -16,22 +16,30 @@ public class ArrayContainerTest {
     public void setUp() {
         IArrayContainer container1 = new ArrayContainer();
     }
+
     @Test
     public void getterTest() {
-        Integer x = 1;
-        assertEquals("wrong method getValue", container.getValue(0), x);
+        Integer value = 1;
+        assertEquals("wrong method getValue", container.getValue(0), value);
     }
 
     @Test
     public void setterTest() {
-        Integer x = 5;
-        container.setValue(0, x);
-        assertEquals("wrong method setValue", container.getValue(0), x);
+        Integer value = 5;
+        container.setValue(0, value);
+        assertEquals("wrong method setValue", container.getValue(0), value);
     }
 
     @Test
-    public void getterLengthTest() throws ArrayContainerException {
-        Integer x = 4;
-        assertEquals("wrong method getLength", container.getLength(), x);
+    public void getLengthTest() throws ArrayContainerException {
+        Integer value = 4;
+        assertEquals("wrong method getLength", container.getLength(), value);
+    }
+
+    @Test(expected = ArrayContainerException.class)
+    public void getterLengthTest() throws Exception {
+        Integer[] mass = null;
+        IArrayContainer<Integer> container = new ArrayContainer<Integer>(mass);
+        container.getLength();
     }
 }
