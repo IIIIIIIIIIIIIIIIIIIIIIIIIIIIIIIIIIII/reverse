@@ -16,7 +16,7 @@ public final class OutputArray implements IOutputArray {
      */
     public <T> void outputArray(final IArrayContainer<T> array) throws OutputArrayException {
         try {
-            Integer length = array.getLength(array);
+            Integer length = array.getLength();
             for (int i = 0; i < length; i++) {
                 System.out.print(array.getValue(i) + " ");
             }

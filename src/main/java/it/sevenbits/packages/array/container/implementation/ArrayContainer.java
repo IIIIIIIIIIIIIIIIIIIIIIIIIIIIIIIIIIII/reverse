@@ -41,10 +41,9 @@ public final class ArrayContainer<T> implements IArrayContainer<T> {
 
     /**
      * Getting length of array
-     * @param arr is our object
      * @return length of array
      */
-    public Integer getLength(final IArrayContainer<T> arr) {
+    public Integer getLength() {
         return array.length;
     }
 }

@@ -22,8 +22,7 @@ public interface IArrayContainer<T> {
 
     /**
      * Getting length
-     * @param arr is our object
      * @return length
      */
-    Integer getLength(IArrayContainer<T> arr);
+    Integer getLength();
 }
