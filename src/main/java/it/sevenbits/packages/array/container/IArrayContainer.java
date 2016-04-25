@@ -1,5 +1,7 @@
 package it.sevenbits.packages.array.container;
 
+import it.sevenbits.packages.array.container.implementation.ArrayContainerException;
+
 /**
  * Interface
  * @param <T>
@@ -23,6 +25,7 @@ public interface IArrayContainer<T> {
     /**
      * Getting length
      * @return length
+     * @throws ArrayContainerException is my own exception
      */
-    Integer getLength();
+    Integer getLength() throws ArrayContainerException;
 }

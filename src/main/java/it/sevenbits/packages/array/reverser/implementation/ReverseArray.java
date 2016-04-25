@@ -1,6 +1,7 @@
 package it.sevenbits.packages.array.reverser.implementation;
 
 import it.sevenbits.packages.array.container.IArrayContainer;
+import it.sevenbits.packages.array.container.implementation.ArrayContainerException;
 import it.sevenbits.packages.array.reverser.IReverseArray;
 
 /**
@@ -11,8 +12,9 @@ public class ReverseArray implements IReverseArray {
      * @param array is element of ArrayContainer
      * @param <T> type
      * @throws ReverseArrayException my own exception
+     * @throws ArrayContainerException
      */
-    public <T> void reverseArray(final IArrayContainer<T> array) throws ReverseArrayException {
+    public <T> void reverseArray(final IArrayContainer<T> array) throws ReverseArrayException, ArrayContainerException {
         try {
             Integer length = array.getLength();
             for (int i = 0; i < length / 2; i++) {
@@ -20,6 +22,8 @@ public class ReverseArray implements IReverseArray {
                 array.setValue(i, array.getValue(length - i - 1));
                 array.setValue(length - i - 1, currentElement);
             }
+        } catch (ArrayContainerException ex) {
+            throw new ReverseArrayException("Incoming argument is null", ex);
         } catch (NullPointerException ex) {
             throw new ReverseArrayException("Incoming arg is empty.", ex);
         }

@@ -12,7 +12,7 @@ public final class ArrayContainer<T> implements IArrayContainer<T> {
     /**
      * Default constructor
      */
-    private ArrayContainer() {
+    ArrayContainer() {
     }
 
     /**
@@ -42,8 +42,13 @@ public final class ArrayContainer<T> implements IArrayContainer<T> {
     /**
      * Getting length of array
      * @return length of array
+     * @throws ArrayContainerException is my own exception
      */
-    public Integer getLength() {
-        return array.length;
+    public Integer getLength() throws ArrayContainerException {
+        try {
+            return array.length;
+        } catch (NullPointerException ex) {
+            throw new ArrayContainerException("Incoming argument is null", ex);
+        }
     }
 }

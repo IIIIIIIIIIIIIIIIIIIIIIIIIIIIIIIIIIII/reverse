@@ -1,5 +1,6 @@
 package it.sevenbits.packages.array.printer;
 
+import it.sevenbits.packages.array.container.implementation.ArrayContainerException;
 import it.sevenbits.packages.array.printer.implementation.OutputArrayException;
 import it.sevenbits.packages.array.container.IArrayContainer;
 
@@ -13,5 +14,5 @@ public interface IOutputArray {
      * @param <T> type
      * @throws OutputArrayException my own exception
      */
-     <T> void outputArray(IArrayContainer<T> array) throws OutputArrayException;
+     <T> void outputArray(IArrayContainer<T> array) throws OutputArrayException, ArrayContainerException;
 }
