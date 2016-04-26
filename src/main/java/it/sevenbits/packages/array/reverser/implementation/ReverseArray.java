@@ -14,7 +14,7 @@ public class ReverseArray implements IReverseArray {
      * @throws ReverseArrayException my own exception
      * @throws ArrayContainerException
      */
-    public <T> void reverseArray(final IArrayContainer<T> array) throws ReverseArrayException, ArrayContainerException {
+    public <T> void reverseArray(final IArrayContainer<T> array) throws ReverseArrayException {
         try {
             Integer length = array.getLength();
             for (int i = 0; i < length / 2; i++) {

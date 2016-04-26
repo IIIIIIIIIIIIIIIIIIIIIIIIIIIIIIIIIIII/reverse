@@ -15,5 +15,5 @@ public interface IReverseArray {
      * @throws ReverseArrayException my own exception
      * @throws ArrayContainerException
      */
-    <T> void reverseArray(IArrayContainer<T> array) throws ReverseArrayException, ArrayContainerException;
+    <T> void reverseArray(IArrayContainer<T> array) throws ReverseArrayException;
 }

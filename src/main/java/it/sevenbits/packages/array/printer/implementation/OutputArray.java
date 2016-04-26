@@ -12,12 +12,12 @@ public final class OutputArray implements IOutputArray {
     /**
      * output array
      *
-     * @param <T>   type
+     * @param <T> type
      * @param array is our object
      * @throws OutputArrayException
      * @throws ArrayContainerException
      */
-    public <T> void outputArray(final IArrayContainer<T> array) throws OutputArrayException, ArrayContainerException {
+    public <T> void outputArray(final IArrayContainer<T> array) throws OutputArrayException {
         try {
             Integer length = array.getLength();
             for (int i = 0; i < length; i++) {

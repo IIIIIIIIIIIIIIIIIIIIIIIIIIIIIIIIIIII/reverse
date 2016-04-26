@@ -37,7 +37,7 @@ public class ArrayContainerTest {
     }
 
     @Test(expected = ArrayContainerException.class)
-    public void getterLengthTest() throws Exception {
+    public void getLengthExceptionTest() throws ArrayContainerException {
         Integer[] mass = null;
         IArrayContainer<Integer> container = new ArrayContainer<Integer>(mass);
         container.getLength();

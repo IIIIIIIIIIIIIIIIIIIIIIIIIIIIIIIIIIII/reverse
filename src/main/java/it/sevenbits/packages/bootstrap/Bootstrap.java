@@ -29,7 +29,7 @@ public final class Bootstrap {
      * @throws OutputArrayException throws if incoming argument will be null
      */
     public static void main(final String[] args) throws ReverseArrayException, OutputArrayException, ArrayContainerException {
-        IArrayContainer<String> array = new ArrayContainer<String>(NULL);
+        IArrayContainer<String> array = new ArrayContainer<String>(ARRAY);
         OutputArray printArray = new OutputArray();
         printArray.outputArray(array);
         ReverseArray reverseArray = new ReverseArray();
