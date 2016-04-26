@@ -46,6 +46,7 @@ public class ReverseArrayTest {
         invertArray.reverseArray(container);
         assertEquals("Method reverseArray does not work correctly with empty array", new Double[] {}, array);
     }
+    
     @Test(expected = ReverseArrayException.class)
     public void reverseExceptionTest() throws ReverseArrayException {
         String[] array = null;
