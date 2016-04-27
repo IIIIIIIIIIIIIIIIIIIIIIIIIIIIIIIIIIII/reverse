@@ -6,7 +6,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-
 public class ArrayContainerTest {
 
     private Integer[] array = new Integer[] {1,2,3,4};
@@ -14,26 +13,23 @@ public class ArrayContainerTest {
 
     @Before
     public void setUp() {
-        IArrayContainer container1 = new ArrayContainer();
+        IArrayContainer container = new ArrayContainer();
     }
 
     @Test
     public void getterTest() {
-        Integer value = 1;
-        assertEquals("wrong method getValue", container.getValue(0), value);
+        assertEquals("wrong method getValue", Integer.valueOf(1), container.getValue(0));
     }
 
     @Test
     public void setterTest() {
-        Integer value = 5;
-        container.setValue(0, value);
-        assertEquals("wrong method setValue", container.getValue(0), value);
+        container.setValue(0, 5);
+        assertEquals("wrong method setValue", Integer.valueOf(5), container.getValue(0));
     }
 
     @Test
     public void getLengthTest() throws ArrayContainerException {
-        Integer value = 4;
-        assertEquals("wrong method getLength", container.getLength(), value);
+        assertEquals("wrong method getLength", Integer.valueOf(4), container.getLength());
     }
 
     @Test(expected = ArrayContainerException.class)

@@ -15,7 +15,6 @@ public final class OutputArray implements IOutputArray {
      * @param <T> type
      * @param array is our object
      * @throws OutputArrayException
-     * @throws ArrayContainerException
      */
     public <T> void outputArray(final IArrayContainer<T> array) throws OutputArrayException {
         try {
@@ -26,8 +25,6 @@ public final class OutputArray implements IOutputArray {
             System.out.println();
         } catch (ArrayContainerException ex) {
             throw new OutputArrayException("Incoming argument is null", ex);
-        } catch (NullPointerException ex) {
-            throw new OutputArrayException("Incoming argument is null.", ex);
         }
     }
 }

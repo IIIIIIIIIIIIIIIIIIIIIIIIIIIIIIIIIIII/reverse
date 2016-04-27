@@ -12,7 +12,6 @@ public class ReverseArray implements IReverseArray {
      * @param array is element of ArrayContainer
      * @param <T> type
      * @throws ReverseArrayException my own exception
-     * @throws ArrayContainerException
      */
     public <T> void reverseArray(final IArrayContainer<T> array) throws ReverseArrayException {
         try {
@@ -24,8 +23,6 @@ public class ReverseArray implements IReverseArray {
             }
         } catch (ArrayContainerException ex) {
             throw new ReverseArrayException("Incoming argument is null", ex);
-        } catch (NullPointerException ex) {
-            throw new ReverseArrayException("Incoming arg is empty.", ex);
         }
     }
 }
