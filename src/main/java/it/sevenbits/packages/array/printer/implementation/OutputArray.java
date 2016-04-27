@@ -10,8 +10,7 @@ import it.sevenbits.packages.array.printer.IOutputArray;
 public final class OutputArray implements IOutputArray {
 
     /**
-     * output array
-     *
+     * print method
      * @param <T> type
      * @param array is our object
      * @throws OutputArrayException
@@ -25,6 +24,8 @@ public final class OutputArray implements IOutputArray {
             System.out.println();
         } catch (ArrayContainerException ex) {
             throw new OutputArrayException("Incoming argument is null", ex);
+        } catch (NullPointerException ex) {
+            throw new OutputArrayException("Incoming argument is null.", ex);
         }
     }
 }

@@ -9,6 +9,7 @@ import it.sevenbits.packages.array.reverser.IReverseArray;
  */
 public class ReverseArray implements IReverseArray {
     /**
+     * reverse method
      * @param array is element of ArrayContainer
      * @param <T> type
      * @throws ReverseArrayException my own exception

@@ -34,12 +34,13 @@ public final class ArrayContainer<T> implements IArrayContainer<T> {
      * getter
      * @param i is index of obtained element
      * @return element of index i
-     */
+     */mmut
     public T getValue(final Integer i) {
         return array[i];
     }
 
     /**
+     * Get length of array
      * Getting length of array
      * @return length of array
      * @throws ArrayContainerException is my own exception
